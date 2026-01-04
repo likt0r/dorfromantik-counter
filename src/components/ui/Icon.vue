@@ -34,7 +34,7 @@ const paths: Record<string, string> = {
   six: 'M5 4h11l3-3v3c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2h-11l-3 3v-3c-1.1 0-2-.9-2-2v-12c0-1.1.9-2 2-2z',
 
   // Cup (Trophy)
-  cup: 'M19 3h-2V1h-2v2H9V1H7v2H5c-1.1 0-2 .9-2 2v3c0 2.61 1.67 4.83 4 5.65V15h2v3H7v2h10v-2h-2v-3h2v-1.35c2.33-.82 4-3.04 4-5.65V5c0-1.1-.9-2-2-2zm0 5c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V5h14v3z',
+  cup: 'M19 2H5V4H1V8C1 11.5 3.5 13.5 6 13.8V16C6 18.2 8.5 20 12 20C15.5 20 18 18.2 18 16V13.8C20.5 13.5 23 11.5 23 8V4H19V2ZM3 8V6H5V11.5C4 10.8 3 9.5 3 8ZM21 8C21 9.5 20 10.8 19 11.5V6H21V8ZM14 20H18V23H6V20H10V18.5C10.6 18.8 11.3 19 12 19C12.7 19 13.4 18.8 14 18.5V20Z',
 
   // Star
   star: 'M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z',
@@ -50,13 +50,40 @@ const color = computed(() => {
   <svg viewBox="0 0 24 24" class="fill-current inline-block drop-shadow-sm" :class="color">
     <path
       :d="path"
+      fill-rule="evenodd"
       :stroke="
-        ['hex', 'tree', 'grain', 'house', 'rail', 'water', 'six'].includes(name)
+        [
+          'hex',
+          'tree',
+          'grain',
+          'house',
+          'rail',
+          'water',
+          'six',
+          'cup',
+          'flag',
+          'task',
+          'star',
+        ].includes(name)
           ? 'white'
           : 'currentColor'
       "
       :stroke-width="
-        ['hex', 'tree', 'grain', 'house', 'rail', 'water', 'six'].includes(name) ? '2' : '0.5'
+        [
+          'hex',
+          'tree',
+          'grain',
+          'house',
+          'rail',
+          'water',
+          'six',
+          'cup',
+          'flag',
+          'task',
+          'star',
+        ].includes(name)
+          ? '2'
+          : '0.5'
       "
       :fill="
         name === 'hex'
@@ -73,7 +100,11 @@ const color = computed(() => {
                     ? '#8CC6D1'
                     : name === 'six'
                       ? '#E5E7EB'
-                      : 'currentColor'
+                      : name === 'flag'
+                        ? '#E5E7EB'
+                        : name === 'task'
+                          ? '#E5E7EB'
+                          : 'currentColor'
       "
     />
     <text
