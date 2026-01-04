@@ -235,22 +235,22 @@ if (!store.state.currentId) {
           <span class="text-white font-bold text-xs">Module</span>
         </div>
 
-        <!-- Player 1 Module Inputs -->
-        <div class="col-span-2 grid grid-cols-2 gap-[2px] bg-rose-400">
-          <div class="relative bg-rose-400 flex items-center justify-center">
+        <!-- Player 1 Module Icons (display only) -->
+        <div class="col-span-2 grid grid-cols-2 gap-[2px] bg-white">
+          <div class="relative bg-rose-400 flex items-center justify-center h-full">
             <Icon name="cup" class="w-8 h-8 text-white" />
           </div>
-          <div class="relative bg-rose-400 flex items-center justify-center">
+          <div class="relative bg-rose-400 flex items-center justify-center h-full">
             <Icon name="star" class="w-8 h-8 text-white" />
           </div>
         </div>
 
-        <!-- Player 2 Module Inputs -->
-        <div class="col-span-2 grid grid-cols-2 gap-[2px] bg-blue-400">
-          <div class="relative bg-blue-400 flex items-center justify-center">
+        <!-- Player 2 Module Icons (display only) -->
+        <div class="col-span-2 grid grid-cols-2 gap-[2px] bg-white">
+          <div class="relative bg-blue-400 flex items-center justify-center h-full">
             <Icon name="cup" class="w-8 h-8 text-white" />
           </div>
-          <div class="relative bg-blue-400 flex items-center justify-center">
+          <div class="relative bg-blue-400 flex items-center justify-center h-full">
             <Icon name="star" class="w-8 h-8 text-white" />
           </div>
         </div>
