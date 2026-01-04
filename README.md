@@ -1,42 +1,28 @@
-# dorf-romantik-counter
+# Dorfromantik Counter (Duel)
 
-This template should help get you started developing with Vue 3 in Vite.
+Digitale Zählhilfe für das Brettspiel **Dorfromantik – Duell**.  
+Diese Web-App bildet das bekannte Punkteblatt nach und ermöglicht das komfortable Erfassen von Punkten für zwei Spieler auf Desktop und Mobilgeräten. Ergebnisse werden lokal gespeichert, und eine Spielehistorie erleichtert das Wechseln zwischen Partien.
 
-## Recommended IDE Setup
+## Features
+- Zweispaltiges Layout für zwei Spieler mit allen Wertungskategorien (Aufträge/Flags je Kategorie, Längste Strecke/Fluss, Gebiete, Sonderplättchen, Module).
+- Automatische Zwischensummen und Gesamtsummen, manuelle Eingabe der Modul-Zwischensummen.
+- Responsive Design, Touch/Nummern-Eingabe-freundlich.
+- Lokale Speicherung der Partien (localStorage) und schnelle Auswahl über die Action-Bar.
+- Docker- und GHCR-Workflow zum Bauen/Veröffentlichen des Images.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Entwicklung
+```bash
+npm install
+npm run dev
+```
+Die App läuft anschließend im Vite-Dev-Server (Standard: http://localhost:5173).
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-bun install
+## Build & Docker
+```bash
+npm run build
+docker build -t dorfromantik-counter .
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
-bun dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-bun run build
-```
+## Hinweis / Warning
+**Dieses Projekt (Code, Texte, Workflow) wurde vollständig durch eine KI erstellt.**  
+Bitte prüfe Sicherheit, Genauigkeit und Lizenzkompatibilität eigenständig, bevor du es produktiv nutzt.

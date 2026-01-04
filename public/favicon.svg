@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dorfromantik Duel Favicon">
+  <!-- Left half (Player 2 - Blue) -->
+  <polygon points="32,4 8,18 8,46 32,60 32,32" fill="#60a5fa"/>
+  <!-- Right half (Player 1 - Red) -->
+  <polygon points="32,4 56,18 56,46 32,60 32,32" fill="#fb7185"/>
+  <!-- Broken hexagon outline -->
+  <polygon points="32,4 56,18 56,46 32,60 8,46 8,18"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="4"
+    stroke-linejoin="round"/>
+  <!-- Split highlight -->
+  <line x1="32" y1="4" x2="32" y2="60" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
