@@ -1,11 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import GameHistory from './components/GameHistory.vue'
+import ScoreBoard from './components/ScoreBoard.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
-</template>
+  <div class="min-h-screen bg-white font-sans pb-16">
+    <main class="container mx-auto px-[2px] py-[2px]">
+      <ScoreBoard />
+    </main>
 
-<style scoped></style>
+    <GameHistory />
+  </div>
+</template>
