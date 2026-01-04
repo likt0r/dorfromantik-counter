@@ -1,19 +1,19 @@
 # Stage 1: Build
-FROM node:22-alpine AS builder
+FROM oven/bun:1-alpine AS builder
 
 WORKDIR /app
 
 # Copy package files first to leverage cache
-COPY package*.json ./
+COPY package.json bun.lock ./
 
 # Install dependencies
-RUN npm ci
+RUN bun install --frozen-lockfile
 
 # Copy the rest of the application
 COPY . .
 
 # Build the application
-RUN npm run build-only
+RUN bun run build-only
 
 # Stage 2: Serve
 FROM joseluisq/static-web-server:2-alpine

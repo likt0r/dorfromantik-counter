@@ -14,6 +14,14 @@ dist-ssr
 coverage
 *.local
 
+# Bun
+# bun.lockb is binary and usually should be committed, but some prefer to ignore it
+# and rely on package.json. However, usually it IS committed.
+# Since we are using it in Dockerfile, we should NOT ignore it. 
+# But let's check if the user wants to ignore it or not. 
+# The common practice is to commit lockfiles.
+# So I will NOT add it to .gitignore.
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

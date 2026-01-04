@@ -9,12 +9,30 @@ const store = useGameStore()
 const game = store.currentGame
 
 const p1Score = computed(() => {
-  if (!game.value) return { subtotalTop: 0, subtotalModules: 0, total: 0 }
+  if (!game.value)
+    return {
+      subtotalTop: 0,
+      subtotalModules: 0,
+      total: 0,
+      subtotalTopCol1: 0,
+      subtotalTopCol2: 0,
+      subtotalModulesCol1: 0,
+      subtotalModulesCol2: 0,
+    }
   return store.calculateScore(game.value.players[0])
 })
 
 const p2Score = computed(() => {
-  if (!game.value) return { subtotalTop: 0, subtotalModules: 0, total: 0 }
+  if (!game.value)
+    return {
+      subtotalTop: 0,
+      subtotalModules: 0,
+      total: 0,
+      subtotalTopCol1: 0,
+      subtotalTopCol2: 0,
+      subtotalModulesCol1: 0,
+      subtotalModulesCol2: 0,
+    }
   return store.calculateScore(game.value.players[1])
 })
 
