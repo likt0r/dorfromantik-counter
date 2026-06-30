@@ -1,14 +1,29 @@
 <script setup lang="ts">
-import GameHistory from './components/GameHistory.vue'
-import ScoreBoard from './components/ScoreBoard.vue'
+// Navigation tabs + routed pages (Dorfromantik / Flügelschlag)
 </script>
 
 <template>
-  <div class="min-h-screen bg-white font-sans pb-16">
-    <main class="container mx-auto px-[2px] py-[2px]">
-      <ScoreBoard />
-    </main>
+  <div class="min-h-screen bg-white font-sans pt-12 pb-16">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-[60] bg-slate-600 text-white shadow-md h-12">
+      <div class="max-w-md mx-auto grid grid-cols-2 h-full">
+        <router-link
+          to="/"
+          class="flex items-center justify-center text-sm font-bold uppercase tracking-wide transition-colors"
+          exact-active-class="bg-slate-800 text-white"
+        >
+          Dorfromantik Duell
+        </router-link>
+        <router-link
+          to="/fluegelschlag"
+          class="flex items-center justify-center text-sm font-bold uppercase tracking-wide transition-colors"
+          active-class="bg-slate-800 text-white"
+        >
+          Flügelschlag Duell
+        </router-link>
+      </div>
+    </nav>
 
-    <GameHistory />
+    <router-view />
   </div>
 </template>
